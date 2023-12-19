@@ -1,0 +1,54 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .header-right {
+    position: absolute;
+    right: 20px;
+    top: 3px;
+    border: 2px black 0 0 0 ;
+  }
+  .icon-left {
+    position: absolute;
+    right: 120px;
+    top: 20px;
+  }
+
+  .btn-sm {
+    width: 100px;
+  }
+  .action a {
+    margin: 5px;
+    align-content: center;
+    cursor: pointer;
+  }
+  .card-flex {
+    display: flex;
+    width: 462px;
+  }
+  .icon-span img {
+    width: 25px;
+    height: 25px;
+  }
+
+.btn-excel{
+  display: flex;
+  width: 140px;
+  background-color: rgb(30, 122, 30);
+}
+.btn-excel span:last-child{
+  padding: 3px;
+}
+.add-product-button a {
+  padding: 8px;
+}
+.excel-upload-dialog{
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 16px 16px;
+}

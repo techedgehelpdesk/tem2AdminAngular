@@ -1,0 +1,281 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body"></div>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <h3 class="mb-0">Add Product</h3>
+            </div>
+            <!-- <div class="col-4 text-right">
+                <a [routerLink]="['/product']" class="btn btn-sm btn-primary"
+                  >Product List</a
+                >
+              </div> -->
+            <div class="col-4 text-right">
+              <a (click)="submitForm()" class="btn btn-sm btn-primary"
+                >Save Product</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="productForm">
+            <h6 class="heading-small text-muted mb-4">Product information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <!-- Manual Description -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="form-control-label">Manual Description</label>
+                    <input
+                      formControlName="manual_description"
+                      type="text"
+                      id="input-name"
+                      class="form-control form-control-alternative"
+                      placeholder="Enter manual description"
+                    />
+                  </div>
+                </div>
+                <!-- Accounts Description -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="form-control-label"
+                      >Accounts Description</label
+                    >
+                    <input
+                      type="text"
+                      formControlName="accounts_description"
+                      id="input-name"
+                      class="form-control form-control-alternative"
+                      placeholder="Enter accounts description"
+                    />
+                  </div>
+                </div>
+                <!-- Model Suitability -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">Model Suitability</label>
+                    <input
+                      type="text"
+                      formControlName="model_suitability"
+                      class="form-control form-control-alternative"
+                      placeholder="Model Suitability"
+                    />
+                  </div>
+                </div>
+                <!-- Specification -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="specification"
+                      >Specification</label
+                    >
+                    <input
+                      type="text"
+                      formControlName="specification"
+                      id="specification"
+                      class="form-control form-control-alternative"
+                      placeholder="Specification"
+                    />
+                  </div>
+                </div>
+                <!-- Part No -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">Part No</label>
+                    <input
+                      type="text"
+                      formControlName="part_no"
+                      class="form-control form-control-alternative"
+                      placeholder="Part No"
+                      value="Part No"
+                    />
+                  </div>
+                </div>
+                <!-- Weight -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="weight"
+                      >Weight</label
+                    >
+                    <input
+                      type="text"
+                      formControlName="weight"
+                      id="specification"
+                      class="form-control form-control-alternative"
+                      placeholder="weight"
+                    />
+                  </div>
+                </div>
+                <!-- Consumer Price -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">Consumer Price</label>
+                    <input
+                      type="number"
+                      formControlName="consumer_price"
+                      class="form-control form-control-alternative"
+                      placeholder="consumer price"
+                    />
+                  </div>
+                </div>
+
+                <!-- New Consumer Price -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="weight"
+                      >New Consumer Price</label
+                    >
+                    <input
+                      type="number"
+                      formControlName="new_consumer_price"
+                      id="specification"
+                      class="form-control form-control-alternative"
+                      placeholder="New Consumer Price"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- Image 1 -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name"
+                      >Thumbnail Image Small (1)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-first-name"
+                      class="form-control form-control-alternative"
+                      placeholder="First name"
+                      value="Lucky"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name"
+                      >Thumbnail Image Big (1)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-last-name"
+                      class="form-control form-control-alternative"
+                      placeholder="Last name"
+                      value="Jesse"
+                    />
+                  </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name"
+                      >Thumbnail Image Small (2)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-first-name"
+                      class="form-control form-control-alternative"
+                      placeholder="First name"
+                      value="Lucky"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name"
+                      >Thumbnail Image Big (2)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-last-name"
+                      class="form-control form-control-alternative"
+                      placeholder="Last name"
+                      value="Jesse"
+                    />
+                  </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name"
+                      >Thumbnail Image Small (3)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-first-name"
+                      class="form-control form-control-alternative"
+                      placeholder="First name"
+                      value="Lucky"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name"
+                      >Thumbnail Image Big (3)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-last-name"
+                      class="form-control form-control-alternative"
+                      placeholder="Last name"
+                      value="Jesse"
+                    />
+                  </div>
+                </div>
+                <!-- Image 4 -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name"
+                      >Thumbnail Image Small (4)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-first-name"
+                      class="form-control form-control-alternative"
+                      placeholder="First name"
+                      value="Lucky"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name"
+                      >Thumbnail Image Big (4)</label
+                    >
+                    <input
+                      type="file"
+                      id="input-last-name"
+                      class="form-control form-control-alternative"
+                      placeholder="Last name"
+                      value="Jesse"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Description -->
+            <h6 class="heading-small text-muted mb-4">Product Description</h6>
+            <div class="pl-lg-4">
+              <div class="form-group">
+                <label>Description</label>
+                <textarea
+                  rows="4"
+                  class="form-control form-control-alternative"
+                  placeholder="A few words about the product ..."
+                ></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

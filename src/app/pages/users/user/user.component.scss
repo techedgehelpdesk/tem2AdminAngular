@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .header-right {
+    position: absolute;
+    right: 20px;
+    top: 3px;
+    border: 2px black 0 0 0 ;
+  }
+  .icon-left {
+    position: absolute;
+    right: 120px;
+    top: 20px;
+  }
+
+  .btn-sm {
+    width: 100px;
+  }
+  .action a {
+    margin: 5px;
+    align-content: center;
+    cursor: pointer;
+  }
