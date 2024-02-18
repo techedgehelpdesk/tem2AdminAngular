@@ -141,131 +141,80 @@
                   </div>
                 </div>
               </div>
-
+              <button
+              class="btn btn-sm btn-primary"
+              type="button"
+              (click)="addImage()"
+            >
+              Add Images
+            </button>
               <div class="row">
+               
+                <!-- Image Form Array Start  -->
+                <form
+                  id="imageFormId"
+                  [formGroup]="imagesFormGroup"
+                  autocomplete="off"
+                  #ngFormImage="ngForm"
+                >
+                  <ng-container formArrayName="items">
+                    <ng-container
+                      *ngFor="
+                      let item of image_form_arr.controls;
+                      let index = index
+                    "
+                      [formGroupName]="index"
+                    >
+                      <ng-container
+                        *ngIf="image_form_arr.at(index).get('file_path').value"
+                      >
+                        <img
+                        class="product-image-big"
+                          [src]="image_form_arr.at(index).get('file_path').value"
+                        />
+                      </ng-container>
+                      <ng-container *ngIf="!image_form_arr.at(index).get('file_path').value">
+                        <input
+                        type="file"
+                        (change)="selectFormArrImg($event,index)"
+                      />
+                      </ng-container>
+                       </ng-container
+                  ></ng-container>
+                </form>
+                <!-- Image Form Array End  -->
                 <!-- Image 1 -->
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-first-name"
-                      >Thumbnail Image Small (1)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-first-name"
-                      class="form-control form-control-alternative"
-                      placeholder="First name"
-                      value="Lucky"
-                    />
+                <!-- <ng-container *ngFor="let images of imageList">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-first-name"
+                        >Thumbnail Image</label
+                      >
+
+                      <img class="product-image-big" [src]="images.filePath" />
+
+                      <input
+                        type="file"
+                        id="input-first-name"
+                        class="form-control form-control-alternative"
+                        (change)="fileSelect($event)"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-last-name"
-                      >Thumbnail Image Big (1)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-last-name"
-                      class="form-control form-control-alternative"
-                      placeholder="Last name"
-                      value="Jesse"
-                    />
-                  </div>
-                </div>
-                <!-- Image 2 -->
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-first-name"
-                      >Thumbnail Image Small (2)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-first-name"
-                      class="form-control form-control-alternative"
-                      placeholder="First name"
-                      value="Lucky"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-last-name"
-                      >Thumbnail Image Big (2)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-last-name"
-                      class="form-control form-control-alternative"
-                      placeholder="Last name"
-                      value="Jesse"
-                    />
-                  </div>
-                </div>
-                <!-- Image 3 -->
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-first-name"
-                      >Thumbnail Image Small (3)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-first-name"
-                      class="form-control form-control-alternative"
-                      placeholder="First name"
-                      value="Lucky"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-last-name"
-                      >Thumbnail Image Big (3)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-last-name"
-                      class="form-control form-control-alternative"
-                      placeholder="Last name"
-                      value="Jesse"
-                    />
-                  </div>
-                </div>
-                <!-- Image 4 -->
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-first-name"
-                      >Thumbnail Image Small (4)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-first-name"
-                      class="form-control form-control-alternative"
-                      placeholder="First name"
-                      value="Lucky"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-last-name"
-                      >Thumbnail Image Big (4)</label
-                    >
-                    <input
-                      type="file"
-                      id="input-last-name"
-                      class="form-control form-control-alternative"
-                      placeholder="Last name"
-                      value="Jesse"
-                    />
-                  </div>
-                </div>
+                </ng-container> -->
               </div>
+              <!-- <button
+                class="btn btn-sm btn-primary"
+                type="button"
+                (click)="submitImageForm()"
+              >
+                Submit Images
+              </button> -->
             </div>
             <!-- Description -->
-            <h6 class="heading-small text-muted mb-4">Product Description</h6>
             <div class="pl-lg-4">
               <div class="form-group">
-                <label>Description</label>
+                <label>KeyWords</label>
                 <textarea
                   rows="4"
                   class="form-control form-control-alternative"

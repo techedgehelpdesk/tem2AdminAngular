@@ -8,10 +8,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 @NgModule({
   declarations: [
     ProductComponent,
-    AddEditProductComponent
+    AddEditProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
